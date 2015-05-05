@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="stylesheet" type="text/css" media="print" href="<{$xoops_url}>/themes/fafane84style/print.css" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<div id="header">
+ <div id="logo"><a href="<{$xoops_url}>/index.php"><img src="<{$xoops_url}>/themes/fafane84style/images/logo.gif" alt="" /></a></div>
+ <div id="navig">
+   <img src="<{$xoops_url}>/themes/fafane84style/images/accueil.gif" alt="" /><a href="<{$xoops_url}>/index.php">Accueil</a>
+   &nbsp;&bull;&nbsp;
+   <img src="<{$xoops_url}>/themes/fafane84style/images/faq.gif" alt="" /><a href="<{$xoops_url}>/modules/xoopsfaq/">FAQ</a>
+   &nbsp;&bull;&nbsp;
+   <img src="<{$xoops_url}>/themes/fafane84style/images/forum.gif" alt="" /><a href="<{$xoops_url}>/modules/newbb/">Forum</a>
+   &nbsp;&bull;&nbsp;
+   <img src="<{$xoops_url}>/themes/fafane84style/images/gb.gif" alt="" /><a href="<{$xoops_url}>/modules/xfguestbook/">Livre d'or</a>
+   &nbsp;&bull;&nbsp;
+   <img src="<{$xoops_url}>/themes/fafane84style/images/sondage.gif" alt="" /><a href="<{$xoops_url}>/modules/xoopspoll/">Sondages</a>
+   &nbsp;&bull;&nbsp;
+   <img src="<{$xoops_url}>/themes/fafane84style/images/membres.gif" alt="" /><a href="<{$xoops_url}>/modules/xoopsmembers/liste.php">Membres</a>
+   &nbsp;&bull;&nbsp;
+   <img src="<{$xoops_url}>/themes/fafane84style/images/ecrire.gif" alt="" /><a href="mailto:fafane84@laposte.net">Contact</a>
+  </div>
+</div>
+<div class="fond">
+<div id="conteneur">
+  <div id="gauche">
+   <{foreach item=block from=$xoops_lblocks}>
+   <div class="blockTitle"><{$block.title}></div>
+   <div class="blockContent">
+     <{$block.content}>
+   </div>
+   <div style="font-size:8px;">&nbsp;</div>
+   <{/foreach}>
+  </div>
+  <{if $xoops_showrblock == 1}>
+  <div id="droite">
+    <{foreach item=block from=$xoops_rblocks}>
+    <div class="blockTitle"><{$block.title}></div>
+    <div class="blockContent">
+      <{$block.content}>
+    </div>
+    <div style="font-size:8px;">&nbsp;</div>
+    <{/foreach}>
+  </div>
+  <{/if}>
+  <div id="<{if $xoops_showlblock == 0 or $xoops_showrblock == 0}>centreMaxi<{else}>centre<{/if}>">
+    <{if $xoops_showcblock == 1}>
+    <div id="centreCentre">
+      <{foreach item=block from=$xoops_ccblocks}>
+      <div class="blockTitle"><{$block.title}></div>
+      <div class="blockContent">
+        <{$block.content}>
+      </div>
+      <{/foreach}>    
+    </div>
+    <div id="centreGauche">
+      <{foreach item=block from=$xoops_clblocks}>
+      <div class="blockTitle"><{$block.title}></div>
+      <div class="blockContent">
+        <{$block.content}>
+      </div>
+      <{/foreach}>    
+    </div>
+    <div id="centreDroite">
+      <{foreach item=block from=$xoops_crblocks}>
+      <div class="blockTitle"><{$block.title}></div>
+      <div class="blockContent">
+        <{$block.content}>
+      </div>
+      <{/foreach}>
+    </div>
+    <{/if}>
+    <div id="modules">
+      <{$xoops_contents}>
+    </div>
+  </div>
+  <hr class="spacer" />
+</div>
+<div>
+  <div id="footer">
+	Page valide <a href="http://validator.w3.org/check?uri=referer">XHTML 1.0 Strict</a> et <a href="http://jigsaw.w3.org/css-validator/validator?uri=<{$xoops_url}>/themes/fafane84style/style.css">CSS</a>
+    &nbsp;&copy;2004 fafane84
+	<br />
+  <{$xoops_footer}> 
+  </div>
+  <div id="istatFooter">
+	<{if $xoops_isadmin != 1}>
+	<script type="text/Javascript">
+	<!--
+	istat = new Image(1,1);
+	istat.src = "<{$xoops_url}>/modules/istats/include/counter.php?sw="+screen.width+"&sc="+screen.colorDepth+"&refer="+escape(document.referrer)+"&page="+location.href;
+	//-->
+	</script>
+	<{/if}>
+  </div>
+</div>
+</div>
+</body>
+</html>
